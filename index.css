@@ -1,0 +1,397 @@
+ /*  1. RESET E CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    background: url("img/fundo.png.png") no-repeat center center fixed; 
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+/*  2. CABEÇALHO E NAVEGAÇÃO */
+
+header img {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    border: 5px solid #f08903;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 35px;
+    gap: 60px;
+}
+
+nav a:hover {
+    color: #f8cc07;
+}
+
+nav ul li a {
+    transition: color 0.3s;
+}
+
+/*  3. TIPOGRAFIA E SEÇÕES*/
+
+.center { text-align: center; }
+
+h1 {
+    font-size: 60px;
+    color: #f26522;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 28px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 16px;
+    max-width: 900px;
+    margin: 0 auto 10px auto;
+    line-height: 1.3;
+}
+
+.secao ul {
+    list-style-type: disc;
+    max-width: 900px;
+    margin: 20px auto;
+    text-align: left;
+    font-size: 22px;
+}
+
+/*  4. COMPONENTES (CARDS E BOTÕES) */
+
+.container-cards {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.card {
+    background: rgba(39, 14, 1, 0.9);
+    border: 2px solid #f08903;
+    border-radius: 15px;
+    width: 100%; 
+    max-width: 280px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.card-header {
+    padding: 10px 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-header h2 { margin: 0; font-size: 1.4rem; color: #f26522; }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.bnt-volta {
+    display: inline-flex;
+    align-items: center;
+    color: #ee801a;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid #ee801a;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.6);
+    transition: all 0.35s ease;
+    margin: 20px 0;
+    gap: 10px;
+}
+
+/* 5. RODAPÉ E ANIMAÇÕES*/
+
+footer {
+    background-color: rgb(39, 14, 1);
+    padding: 30px 0; /* Aumentei um pouco o preenchimento */
+    text-align: center;
+    margin-top: auto; 
+    border-top: 2px solid #f08903; /* Linha laranja para combinar com o resto */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;      
+    margin-bottom: 15px;
+}
+/* ESTA É A PARTE QUE AUMENTA OS ÍCONES */
+.social-icons a i {
+    font-size: 40px; /* Tamanho dos ícones */
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.social-icons a i:hover {
+    color: #f26522;    
+    transform: scale(1.2); /* Aumenta levemente ao passar o mouse */
+}
+
+footer p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+/* --- ESTILO DOS CARDS (ADICIONE ABAIXO DO BOTAO) --- */
+
+.area-objetivo-cards {
+    display: flex;            
+    justify-content: center;  /* Centraliza o grupo na tela */
+    gap: 40px;               /* Espaço entre os dois cards */
+    flex-wrap: wrap;         /* Se a tela for pequena, eles empilham */
+    margin-top: 120px;       /* Espaço para não bater no botão Voltar */
+    padding: 20px;
+}
+
+.card-objetivo {
+    background: rgba(39, 14, 1, 0.95); 
+    border: 2px solid #f08903;         
+    border-radius: 15px;
+    width: 350px;                     
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.card-header {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(240, 137, 3, 0.3);
+}
+.card-content p {
+    margin-bottom: 12px;
+    line-height: 1.6; /* Melhora a leitura do texto */
+    text-align: left;
+    max-width: 88%; /* Garante que o texto use toda a largura do card */
+}
+
+.event-info i, .info-section i {
+    color: #f26522; /* Deixa os ícones laranjas como o resto do site */
+    margin-right: 8px;
+    width: 20px;
+    text-align: center;
+}
+.card-header h3 {
+    margin: 0;
+    color: #f26522 !important; 
+    font-size: 1.8rem;
+}
+
+.card-body {
+    padding: 30px; /* ISSO AQUI resolve o texto colado na borda */
+}
+
+.card-body p {
+    color: white !important; 
+    line-height: 1.6;        
+    font-size: 1.1rem;
+    margin: 0;
+    text-align: left;       
+}
+/* --- ESTILO DA COLAGEM DESTAQUE --- */
+
+.secao-galeria-destaque {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+    padding: 100px 20px 60px; /* Mais espaço no topo por causa do botão */
+    margin-top: -30px;        /* Ajuste para não colar nos cards de cima */
+}
+
+.destaque-wrapper {
+    width: 90%;
+    max-width: 1100px; 
+    
+    /* MANTÉM A BORDA E A SOMBRA QUE ESTÃO NA IMAGEM */
+    border: 3px solid #f08903; 
+    border-radius: 15px;       
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6); 
+    
+    background-color: rgba(39, 14, 1, 0.9); 
+    
+    overflow: hidden; 
+    transition: transform 0.4s ease; 
+}
+
+.destaque-wrapper:hover {
+    transform: translateY(-5px); 
+}
+
+.colagem-completa {
+    display: block;
+    width: 100%;
+    height: auto; /* Mantém a proporção original */
+    
+    /* ESSENCIAL: Garante que a imagem inteira caiba dentro do container sem cortar */
+    object-fit: contain; 
+}
+/* --- ESTILO DO FORMULÁRIO COMPACTO NA DIREITA --- */
+
+.card-formulario {
+    background: rgba(39, 14, 1, 0.95);
+    border: 2px solid #f08903;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+.card-formulario input,
+.card-formulario textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+}
+
+.card-formulario button {
+    width: 100%;
+    padding: 10px;
+    background: #f26522;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* Ajuste para celular */
+@media (max-width: 480px) {
+    .linha-dupla {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Destaca o campo onde o usuário está digitando ou navegando pelo teclado */
+input:focus, textarea:focus, button:focus, a:focus {
+    outline: 3px solid #f8cc07;
+    outline-offset: 2px;
+}
+/* Esconde o label visualmente mas mantém para leitores de tela */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Garante que o texto dos cards tenha um tamanho mínimo de leitura */
+.card-content p {
+    font-size: 1rem; /* Mínimo de 16px */
+}
+/* Sobe o ícone do VLibras */
+[vw].enabled {
+    top: 20% !important; /* Ajuste a porcentagem para subir ou descer (ex: 10% fica bem no topo) */
+    bottom: auto !important;
+    transform: none !important;
+}
+
+/* Ajusta a posição da janela que abre quando clica no boneco */
+.vw-plugin-wrapper {
+    top: 30% !important; 
+    bottom: auto !important;
+}
+/* ============================= */
+/* 📱 RESPONSIVIDADE COMPLETA */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+    }
+
+    header img {
+        width: 120px;
+        height: 120px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 15px;
+        padding: 0 10px;
+    }
+
+    .container-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .card {
+        max-width: 90%;
+    }
+
+    .destaque-wrapper {
+        width: 95%;
+    }
+
+    .card-formulario {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .area-objetivo-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    header {
+    margin-top: 20px;
+}
+.card-content p {
+    max-width: 100%;
+}
+.card {
+    width: 100%;
+}
+}

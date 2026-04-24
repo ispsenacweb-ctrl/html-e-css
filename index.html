@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raízes e Ritmos</title>
+    <!-- Meta Tags Básicas -->
+<meta name="description" content="Raízes e Ritmos: Um evento cultural na Orla de Candeias que valoriza a diversidade, as raízes locais e a música como conexão social.">
+<meta name="keywords" content="evento cultural, Candeias, Jaboatão, música, raízes, ritmos, arte ao ar livre">
+<meta name="author" content="Raízes e Ritmos">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph / Facebook / WhatsApp (Como o link aparece ao ser compartilhado) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://raizeseritmos.com.br">
+<meta property="og:title" content="Raízes e Ritmos - Conexão e Cultura na Orla">
+<meta property="og:description" content="Participe dessa vivência cultural ao ar livre no dia 14/02/2026 em Candeias.">
+<meta property="og:image" content="https://raizeseritmos.com.br/img/logo.png.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://raizeseritmos.com.br">
+<meta property="twitter:title" content="Raízes e Ritmos">
+<meta property="twitter:description" content="Valorização das raízes culturais e música na beira mar de Candeias.">
+<meta property="twitter:image" content="https://raizeseritmos.com.br/img/logo.png">
+<!-- Favicon (Opcional, mas recomendado para a aba do navegador) -->
+<link rel="icon" type="image/x-icon" href="img/logo.png.png">
+
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+    <ul>
+        <li><a href="objetivo.html"><i class="fa-solid fa-bullseye"></i> Objetivo</a></li>
+        <li><a href="público alvo.html"><i class="fa-solid fa-users"></i> Público-alvo</a></li>
+        <li><a href="posts.html"><i class="fa-solid fa-image"></i> Posts</a></li>
+        <li><a href="serviço.html"><i class="fa-solid fa-handshake"></i> Serviço</a></li>
+    </ul>
+</nav>
+
+    <header>
+        <div class="center">
+            <img src="img/logo.png.png" alt="Logotipo circular do projeto Raízes e Ritmos com fundo laranja">
+        </div>
+    </header>
+    
+      <main>
+    <section class="container-cards">
+        <details class="card">
+            <summary class="card-header">
+                <h2><i class="fa-solid fa-calendar-days"></i> O Evento</h2>
+                <span class="seta"><i class="fa-solid fa-chevron-down"></i></span>
+            </summary>
+            <div class="card-content">
+                <div class="event-info">
+                    <p><strong>Sábado, 14/02/2026</strong></p>
+                    <p><i class="fa-solid fa-location-dot"></i> Calçadão beira mar na Orla de Candeias,
+                    evento gratuito e aberto ao público.</p>
+                    <p><i class="fa-solid fa-clock"></i>18h – 22h</p>
+                </div>
+            </div>
+        </details>
+
+        <details class="card">
+            <summary class="card-header">
+                <h2><i class="fa-solid fa-star"></i> Sobre o Projeto</h2>
+                <span class="seta"><i class="fa-solid fa-chevron-down"></i></span>
+            </summary>
+            <div class="card-content">
+                <div class="info-section">
+                    <p class="info-text"> É mais do que um evento — é uma celebração da cultura, da diversidade e da conexão entre pessoas.</p>
+                </div>
+                <div class="info-section">
+                    <p class="info-text">À beira-mar de Candeias, música, arte e comunidade se encontram para criar uma experiência única, leve e envolvente.
+        </p>
+                </div>
+                <div class="info-section">
+                    <span class="info-title">  Parcerias:</span>
+                    <p class="info-text">Apoio de parceiros culturais comprometidos com o fortalecimento da cultura local.</p>
+                </div>
+            </div>
+        </details>
+    </section>
+</main>
+<section class="secao-formulario">
+    <div class="card-formulario">
+    <h3>Envie sua dúvida 💬</h3>
+    
+    <label for="nome" class="sr-only">Seu Nome:</label>
+    <input type="text" id="nome" placeholder="Seu nome" aria-label="Digite seu nome completo">
+
+    <label for="cidade" class="sr-only">Cidade/Bairro:</label>
+    <input type="text" id="cidade" placeholder="Cidade/Bairro" aria-label="Digite sua cidade ou bairro">
+
+    <label for="duvida" class="sr-only">Sua dúvida:</label>
+    <textarea id="duvida" placeholder="Digite sua dúvida aqui..." aria-label="Escreva sua pergunta"></textarea>
+
+   <button onclick="enviarZap()">Enviar no WhatsApp</button>
+</div>
+    <footer>
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="https://instagram.com/raize5ritmos" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/5581973119668" target="_blank" class="icon-link">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+             <p>&copy; 2026 Raízes e Ritmos. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+<script>
+function enviarZap() {
+    let nome = document.getElementById("nome").value;
+    let cidade = document.getElementById("cidade").value;
+    let duvida = document.getElementById("duvida").value;
+
+    if (!nome || !duvida) {
+        alert("Preencha seu nome e a dúvida!");
+        return;
+    }
+
+    let numero = "5581973119668";
+
+    let mensagem = `Olá! Tenho uma dúvida sobre o evento 🎶
+
+Nome: ${nome}
+Cidade: ${cidade}
+
+Dúvida: ${duvida}`;
+
+     let link = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+
+    window.open(link, "_blank");
+}
+  
+</script>
+<div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+    </div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+
+</body>
+</html>
+      
